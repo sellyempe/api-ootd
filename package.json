@@ -2,11 +2,11 @@
   "name": "api-ootd",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
+  "scripts": {
   "start": "node server.js",
   "test": "echo \"Error: no test specified\" && exit 1",
-  "db:migrate": "sequelize db:migrate --config config/config.json --migrations-path migrations",
-  "db:seed": "sequelize db:seed:all --config config/config.json --seeders-path seeders"
+  "db:migrate": "dotenv sequelize-cli db:migrate",
+  "db:seed": "dotenv sequelize-cli db:seed:all"
 },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "dotenv-cli": "^8.0.0",
     "sequelize-cli": "^6.6.3"
   }
 }
