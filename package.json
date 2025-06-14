@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "db:migrate": "node -r dotenv/config ./node_modules/.bin/sequelize-cli db:migrate",
-    "db:seed": "node -r dotenv/config ./node_modules/.bin/sequelize-cli db:seed:all"
-  },
+  "start": "node server.js",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "db:migrate": "cross-env node -r dotenv/config ./node_modules/.bin/sequelize-cli db:migrate",
+  "db:seed": "cross-env node -r dotenv/config ./node_modules/.bin/sequelize-cli db:seed:all"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,7 +26,7 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "sequelize-cli": "^6.6.3"
   }
-
 }
